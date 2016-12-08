@@ -7,6 +7,7 @@
     /// <summary>
     /// An abstract implementation of a priority queue. Whether it's a min heap or max heap or
     /// any other sort of heap is implemented in the inheriting class by defining the Dominates method.
+    /// The bulk of this object came from Ohad Scneider on his StackOverflow response: http://stackoverflow.com/a/13776636
     /// </summary>
     /// <typeparam name="T">What type of object the heap contains. must be IComparable</typeparam>
     public abstract class Heap<T> where T : IComparable
@@ -131,7 +132,6 @@
             this.BubbleDown(0);
             return returnVal;
         }
-
 
         /// <summary>
         /// This is meant to be used for inheriting classes to get items at certain positions
